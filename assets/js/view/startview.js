@@ -25,9 +25,10 @@ define([
         renderSearch : function(wrapper){
             //
             new SearchView({
-                el: $("#"+wrapper.searchWrapper),
+                el: $("#"+wrapper.contentWrapper+" #"+wrapper.searchWrapper),
                 galleryWrapper: wrapper.galleryWrapper,
-                searchWrapper : wrapper.searchWrapper
+                searchWrapper : wrapper.searchWrapper,
+                contentWrapper : wrapper.contentWrapper
             });
         }
     }

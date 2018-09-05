@@ -8,7 +8,7 @@ module.exports = function(grunt) {
           // lint your project's server code
           server: {
             src: [ // some example files
-              'app/js/*.js'
+              '*'
             ],
             exclude: [
               'app/js/config.js'

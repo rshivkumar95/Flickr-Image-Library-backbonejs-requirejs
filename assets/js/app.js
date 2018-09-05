@@ -39,5 +39,23 @@ require(['gallery','Start'],function(gallery, Start){
 		searchWrapper : 'search-area',
 		galleryWrapper : 'gallery-area'
 	});
+
+	Start.renderStart({
+		contentWrapper : 'content2',   
+		searchWrapper : 'search-area',
+		galleryWrapper : 'gallery-area'
+	});
+
+	Start.renderStart({
+		contentWrapper : 'content3',   
+		searchWrapper : 'search-area',
+		galleryWrapper : 'gallery-area'
+	});
+
+	Start.renderStart({
+		contentWrapper : 'content4',   
+		searchWrapper : 'search-area',
+		galleryWrapper : 'gallery-area'
+	});
 	
 });

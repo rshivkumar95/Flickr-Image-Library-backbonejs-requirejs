@@ -7,14 +7,15 @@ define([
     'ImagesView'
 ], function(_, Backbone, Images, Image, Flickr, ImagesView) {
     'use strict';
-   function loadGallery (wrapperId){
+   function loadGallery (galleryWrapper,searchWrapper,contentWrapper){
         var images = new Images();
         var imagesView = new ImagesView({
             model: images,
-            el: $("#"+wrapperId)
+            el: $("#"+contentWrapper+" #"+galleryWrapper),
+            searchWrapper: searchWrapper
         });
         var parameters = {
-            text : $('#search-term').val(),
+            text : $('#'+contentWrapper+' #'+searchWrapper+' #search-term').val(),
             per_page : 20
         }
         Flickr.apiCallout('flickr.photos.search',parameters).then(function(response){

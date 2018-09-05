@@ -17,17 +17,19 @@ define([
             this.render();
         },
         onEnter: function(e){
-            if(e.charCode==13 && $('#'+this.options.searchWrapper+' #search-term').val()!=""){
+            console.log(e.target.value);
+            if(e.charCode==13 && e.target.value!=""){
                 this.search();
             }
 
         },
         search: function(){
-            if($('#'+this.options.searchWrapper+' #search-term').val()!=""){
-                new gallery(this.options.galleryWrapper);
+            if($('#'+this.options.contentWrapper+' #'+this.options.searchWrapper+' #search-term').val()!=""){
+                new gallery(this.options.galleryWrapper,this.options.searchWrapper,this.options.contentWrapper);
             }
         },
         render: function() {
+            console.log(this.options.contentWrapper+" rendered");
             this.$el.html(this.template());
             return this;
         }  
