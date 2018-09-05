@@ -1,0 +1,43 @@
+body{
+    background: #1d1c1c;
+}
+header{
+    padding:20px;
+}
+.flickr-image{
+    height: 90%; 
+    width: 100%;
+}
+.flickr-grid{
+    height:200px;
+}
+.title-header{
+    color: white;
+    text-align: center;
+}
+.flickr-search{
+    opacity: 1;
+    width:40%;
+    margin: 0 auto;
+    background: transparent;
+}
+.flickr-search:focus{
+    background: transparent;
+}
+#search-area{
+    width:100%;
+    margin-bottom:20px;
+}
+
+#search-term{
+    background: transparent;
+    color: white;
+    outline: none;
+    border:none;
+    text-align: center;
+    font-size: 1.5rem;
+}
+#search-term:focus{
+    border:gray;
+    box-shadow: none;
+}
