@@ -1,12 +1,10 @@
 define([
-    'underscore',
-    'backbone',
-    'Image'
-], function(_, Backbone, Image) {
-    'use strict';
-    var Images = Backbone.Collection.extend({
-        model : Image,
+    "backbone",
+    "imageModel"
+], function (Backbone, ImageModel) {
+    "use strict";
+    var ImageCollection = Backbone.Collection.extend({
+        model: ImageModel
     });
-
-    return Images;
+    return ImageCollection;
 });

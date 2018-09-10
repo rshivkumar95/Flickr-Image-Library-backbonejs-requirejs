@@ -1,20 +1,19 @@
 define([
-    'underscore',
-    'backbone',
-    'Image',
-    'text!../../modules/gallery/gallery.html'
-], function(_, Backbone, Image, gallery) {
-    'use strict';
-    
-    var ImageView = Backbone.View.extend({
-        model : new Image(),
-        initialize: function() {
+    "underscore",
+    "backbone",
+    "imageModel",
+    "text!../../modules/gallery/gallery.html"
+], function (_, Backbone, ImageModel, gallery) {
+    "use strict";
+    var ImageModelView = Backbone.View.extend({
+        model: new ImageModel(),
+        initialize: function () {
             this.template = _.template(gallery);
         },
-        render: function() {
+        render: function () {
             this.$el= this.template(this.model.toJSON());
             return this;
         }  
     });
-    return ImageView;
+    return ImageModelView;
 });
